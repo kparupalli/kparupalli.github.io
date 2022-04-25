@@ -1,0 +1,22 @@
+<h2>Shoes</h2>
+<ul class="shoes">
+    <mat-grid-list cols="3" rowHeight="2:2">  
+      <mat-grid-tile *ngFor="let shoe of shoes">
+          <div class="card">
+              <img [src]=shoe.imgsrc>
+              <p>{{shoe.name}}</p>
+              <p class="price">${{shoe.price}}</p>
+              <p>Size: <select (change)="selectSize($event)">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select></p>
+              <p>{{shoe.desc}}</p>
+              <p><button (click)="addItemToCart(shoe)"><mat-icon>add</mat-icon>Add to Cart</button></p>
+          </div>
+      </mat-grid-tile>
+      
+    </mat-grid-list>
+  </ul>
