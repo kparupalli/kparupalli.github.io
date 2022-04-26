@@ -3,14 +3,14 @@
     width: 500px;
     height: 500px;
     text-align: center;
-    font-family: arial;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   .price {
     color: grey;
     font-size: 22px;
   }
 
-  img {
+  .card img {
     max-width: 200px;
     max-height: 200px;
 }
@@ -56,4 +56,16 @@
   option {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
+
+  .mat-flat-button{
+    padding: 5px;
+    height:fit-content;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+    font-size: 18px;
+}
   

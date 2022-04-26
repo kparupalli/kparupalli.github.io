@@ -1,17 +1,22 @@
 <h2>Your Cart - {{totalItems}} item(s) in your bag.</h2>
 <h2>Total: ${{this.totalPrice.toFixed(2)}}</h2>
-<button mat-flat-button><mat-icon>credit_card</mat-icon>Checkout</button>
-
 <ul class="cart">
-    <mat-grid-list cols="2" rowHeight="2:2">  
+    <mat-grid-list cols="3" rowHeight="2:2">  
       <mat-grid-tile *ngFor="let item of cart">
         <div class="card">
           <img [src]=item.imgsrc>
           <p>{{item.name}}</p>
           <p class="price">${{item.price}}</p>
           <p>Size: {{item.size}}</p>
-          <button mat-flat-button (click)="openDialog(item)">Remove<mat-icon>remove_shopping_cart</mat-icon></button>
         </div>
+        <button mat-fab color="primary" (click)="openDialog(item)" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
       </mat-grid-tile>
     </mat-grid-list>
   </ul>
+  <h2>
+    <button mat-flat-button><mat-icon>credit_card</mat-icon>Checkout</button>
+
+  </h2>
+  

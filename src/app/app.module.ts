@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from "@angular/material/dialog";
 import { RemovedialogComponent } from './cart/removedialog/removedialog.component';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import {MatIconModule} from '@angular/material/icon';
     FormsModule,
     MatDialogModule,
     MatIconModule,
+    HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

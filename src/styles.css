@@ -14,5 +14,5 @@ h3 {
 }
 html, body { height: 100%; }
 body { 
-    margin: 0; 
+    text-align: right;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
