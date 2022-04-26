@@ -1,4 +1,15 @@
 <h2>Clothing</h2>
+<div class="select">
+  <h3>Sort Items By:
+    <select (change)="selectItem($event)">
+      <option value="Sort By">Sort By</option>
+      <option value="A-Z">A-Z</option>
+      <option value="LH">Low to High</option>
+      <option value="HL">High to Low</option>
+    </select>
+  </h3>
+</div>
+
 <ul class="clothings">
   <mat-grid-list cols="3" rowHeight="2:2">  
     <mat-grid-tile *ngFor="let cloth of clothings">

@@ -12,6 +12,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 export class ShoesComponent implements OnInit {
   shoes: Clothing[] = [];
   selected: string = "5";
+  dropdownFilter: string = "";
 
   constructor(private clothService: ClothService, private snackBar: MatSnackBar) { }
 
@@ -41,6 +42,31 @@ export class ShoesComponent implements OnInit {
     //update the ui
     console.log("Event: " + JSON.stringify(event));
     this.selected = event.target.value;
+  }
+
+  selectItem(filter: any){
+    //console.log("filter: " + JSON.stringify(filter.target.value));
+    this.dropdownFilter = filter.target.value;
+    if(this.dropdownFilter.includes("A-Z")){
+      //console.log("Inside if statement");
+      this.shoes = this.shoes.sort(function( a, b ) {
+        return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+    });
+      //console.log(JSON.stringify(this.clothings));
+    }
+    if(this.dropdownFilter.includes("LH")){
+      this.shoes = this.shoes.sort(function( a, b ) {
+        return a.price < b.price ? -1 : a.price > b.price ? 1 : 0;
+    });
+      //console.log(JSON.stringify(this.clothings));
+    }
+    if(this.dropdownFilter.includes("HL")){
+      this.shoes = this.shoes.sort(function( a, b ) {
+        return b.price < a.price ? -1 : b.price > a.price ? 1 : 0;
+    });
+      //console.log(JSON.stringify(this.clothings));
+    }
+
   }
 
 }
