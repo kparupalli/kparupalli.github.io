@@ -4,8 +4,6 @@ import { NavBarService } from '../navbar.service';
 import { ClothService } from '../cloth.service';
 import { Subscription } from 'rxjs';
 import { MatBadgeModule } from '@angular/material/badge';
-import { MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from "@angular/platform-browser";
     
 
 @Component({
@@ -29,7 +27,7 @@ export class NavigationbarComponent implements OnInit {
   messageReceived: any;
   //private subscriptionName: Subscription; //important to create a subscription
 
-  constructor(private clothService: ClothService,private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) { 
+  constructor(private clothService: ClothService) { 
     // subscribe to sender component messages
     /*this.subscriptionName = this.navbarService.getUpdate().subscribe
     (message => { //message contains the data sent from service
@@ -39,10 +37,6 @@ export class NavigationbarComponent implements OnInit {
     }
     //console.log(JSON.stringify(this.messageReceived));
     }); */
-    this.matIconRegistry.addSvgIcon(
-      "tshirt",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("https://fonts.gstatic.com/s/i/materialicons/thumb_up/v5/24px.svg")
-    );
   }
 
   ngOnInit(): void {

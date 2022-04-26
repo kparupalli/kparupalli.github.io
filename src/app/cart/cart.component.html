@@ -1,5 +1,7 @@
 <h2>Your Cart - {{totalItems}} item(s) in your bag.</h2>
-<h2>Total: ${{this.totalPrice.toFixed(2)}}</h2>
+<h2>Total: ${{this.totalPrice.toFixed(2)}}
+  <button mat-flat-button><mat-icon>credit_card</mat-icon>Checkout</button>
+</h2>
 <ul class="cart">
     <mat-grid-list cols="3" rowHeight="2:2">  
       <mat-grid-tile *ngFor="let item of cart">
@@ -15,8 +17,4 @@
       </mat-grid-tile>
     </mat-grid-list>
   </ul>
-  <h2>
-    <button mat-flat-button><mat-icon>credit_card</mat-icon>Checkout</button>
-
-  </h2>
   

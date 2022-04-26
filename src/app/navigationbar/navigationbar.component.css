@@ -3,21 +3,7 @@
 h2 {
     text-align: center;
   }
-  
-  .heroes-menu {
-    padding: 0;
-    margin: auto;
-    max-width: 1000px;
-  
-    /* flexbox */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
-  }
-  
+
   a {
     background-color: #346179;
     border-radius: 2px;
