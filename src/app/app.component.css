@@ -1,3 +1,7 @@
 p {
     border-top: 6px solid #346179;
 }
+
+cart {
+    text-align: end;
+}
